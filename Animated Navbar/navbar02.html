@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-size: 29px;
+        color: white;
+       }
+       body{
+        background: url(https://images.unsplash.com/photo-1710775338511-3766c13110b7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxNXx8fGVufDB8fHx8fA%3D%3D);
+        background-size: cover;
+        background-repeat: no-repeat;
+
+       }
+       .nav{
+        background-color: rgb(3, 3, 28);
+        display: flex;
+       }
+       li{
+        list-style: none;
+        margin: 20px 20px 20px 180px;
+        position: relative;
+       }
+       li:hover{
+        color: #0ef;
+       }
+       li::before{
+           content: "";
+           position: absolute;
+           left: -12px;
+           height: 100%;
+           width: 130%;
+           border-bottom: 5px solid #0ef;
+           border-radius: 15px;
+           transform: scale(0) translateY(100px);
+           opacity: 0;
+           transition: .7s;
+       }
+       li:hover::before{
+            opacity: 1;
+            transform: scale(1.1) translateY(0px);
+       }
+
+    </style>
+</head>
+<body>
+    <div class="nav">
+            <li>Home</li>
+            <li>About</li>
+            <li>Docs</li>
+            <li>Service</li>
+            <li>Details</li>
+    </div>
+</body>
+</html>

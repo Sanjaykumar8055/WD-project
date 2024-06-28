@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navbar</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        color: #ffffff;
+        font-size: 29px;
+    }
+    .navbar{
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .navbar > ul{
+        position: relative;
+        display: flex;
+        padding: 20px;
+    }
+    li{
+        list-style: none;
+        margin-right: 140px;
+        z-index: 1;
+    }
+    span{
+        height: 70px;
+        width: 110px;
+        background: linear-gradient( #0ef 30%,rgb(22, 1, 255));
+        position: absolute;
+        top: 1.5px;
+        left: 0px;
+        border-radius: 8px;
+        transition: .5s;
+    }
+    li:nth-child(1):hover~span{
+        left: 0px;
+    }
+    li:nth-child(2):hover~span{
+        left: 210px;
+    }
+    li:nth-child(3):hover~span{
+        left: 420px;
+        width: 130px;
+    }
+    li:nth-child(4):hover~span{
+        left: 655px;
+        width: 90px;
+    }
+    li:nth-child(5):hover~span{
+        left: 856px;
+    }
+    
+</style>
+<body>
+    <div class="navbar">
+        <ul>
+            <li>Home </li>
+            <li>About</li>
+            <li>Service</li>
+            <li>Docs</li>
+            <li>Contact</li>
+            <span></span>
+        </ul>
+    </div>
+</body>
+</html>
